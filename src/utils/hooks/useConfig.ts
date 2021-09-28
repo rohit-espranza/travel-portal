@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { CONFIG_URL } from "../constants";
 const useConfig = () => {
   const [config, setConfig] = useState<any>();
   const [error, setError] = useState<any>();
@@ -6,7 +7,7 @@ const useConfig = () => {
 
   const getConfig = () => {
     setLoading(true);
-    fetch("http://localhost:3005")
+    fetch(CONFIG_URL)
       .then((res) => res.json())
       .then((data) => {
         setConfig(data);
