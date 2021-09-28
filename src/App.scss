@@ -1,0 +1,46 @@
+.App {
+  color: rgb(0, 0, 0);
+  background-color: #ffffff;
+}
+.navbar{
+  max-height: 11vh;
+  box-shadow: 0px 0px 5px 1px #aaa;
+  &-logo{
+    padding:0 5px;
+    margin: 0px 100px;
+    display: flex;
+    align-items: center;
+    img{
+      width: 80px;
+    }
+    
+  }
+}
+
+.loader{
+  min-height: 100vh;
+  &-inner{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    img{
+      animation: loader 1s infinite;
+    }
+    p{
+      font-size: large;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+    }
+  }
+}
+
+@keyframes loader {
+  0%{
+    opacity: 0.7;
+  }
+  100%{
+    opacity: 0.4;
+  }
+}
